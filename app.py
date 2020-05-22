@@ -11,6 +11,9 @@ import re
 from nltk.corpus import stopwords
 from nltk.stem import PorterStemmer 
 from flask import Flask, request, render_template
+
+import nltk
+nltk.data.path.append(r'C:\Users\Daniyal\Desktop\Important\NLP\nltk_data')
 cv = pickle.load(open('transfrom.pkl', 'rb'))
 model = pickle.load(open('model.pkl', 'rb'))
 
@@ -35,4 +38,5 @@ def predict():
     return render_template('result.html', prediction=my_prediction)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.debug = True
+    app.run()

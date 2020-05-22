@@ -73,4 +73,5 @@ def predict(sent):
 import pickle
 pickle.dump(cv, open('transfrom.pkl', 'wb'))
 pickle.dump(modelSVM, open('model.pkl', 'wb'))
-
+import nltk
+nltk.data.path.append(r'C:\Users\Daniyal\Desktop\Important\NLP\nltk_data')
