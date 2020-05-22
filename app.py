@@ -30,7 +30,7 @@ def predict():
         review = []
         ps=PorterStemmer()
         sent = re.sub('[^A-Za-z]', ' ', message).lower().split()
-        sent = [ps.stem(i) for i in sent if not i in stopwords.words('english')]
+        sent = [ps.stem(i) for i in sent]
         sent = ' '.join(sent)
         review.append(sent)
         review = cv.transform(review).toarray()
