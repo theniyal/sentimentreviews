@@ -5,26 +5,24 @@
 </head>
 <body>
 
-	<header>
-		<div class="container">
-		<div id="brandname">
-			ML App
-		</div>
-		<h2>Sentiment Analysis for Movie Reviews</h2>
-		
-	</div>
-	</header>
-	<p style="color:blue;font-size:20;text-align: center;"><b>Results for Comment</b></p>
-	<div class="results">
-
-
 		
 	{% if prediction == 1%}
-	<h2 style="color:red;">Negative Review</h2>
+	<h2 class="styling"style="color:red;">Hmm.. Looks like a negative review :( </h2>
 	{% elif prediction == 0%}
-	<h2 style="color:blue;">Positive Review</h2>
+	<h2 class="styling" style="color:blue;">Hmm.. Looks like a positive review :)</h2>
 	{% endif %}
 	</div>
 
 </body>
+
+<style>
+		.styling{
+			padding:0%; 
+			margin:10%; 
+			font-size: 50px; 
+			text-align: center; 
+			font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+			color: "black"
+		}
+</style>
 </html>

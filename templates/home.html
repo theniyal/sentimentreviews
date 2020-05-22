@@ -2,34 +2,74 @@
 <html>
 <head>
 	<title>Home</title>
-	<!-- <link rel="stylesheet" type="text/css" href="../static/css/styles.css"> -->
-	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
-</head>
+	</head>
 <body>
 
-	<header>
-		<div class="container">
-		<div id="brandname">
-			Machine Learning App with Flask
-		</div>
-		<h2>Spam Detector For Email Messages</h2>
-		
-	</div>
-	</header>
+			<h2 class="styling">HELLO!</h2>
+			<h3 class="styling" style="font-size: 17px;color:slategrey; margin-bottom: 20px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">I will try to predict the sentiment of your movie review!</h3>
 
-	<div class="ml-container">
+	<div style="align-items: center;">
+		<p class="p">Write the review about the last movie you saw.</p>
+
 
 		<form action="{{ url_for('predict')}}" method="POST">
-		<p>Enter Your Message Here</p>
-		<!-- <input type="text" name="comment"/> -->
-		<textarea name="message" rows="6" cols="50"></textarea>
-		<br/>
-
-		<input type="submit" class="btn-info" value="predict">
-		
-	</form>
+			<textarea name="message" rows="10" cols="50" class="textar" placeholder="Remember, I am only 90% accurate, so be nice!"></textarea>
+			<br/>
+			<input type="submit" value="Predict" class='btn'>	
+		</form>
 		
 	</div>
+
+	<style>
+		.p{
+			padding:0%; 
+			margin:0%; 
+			font-size: 150px; 
+			text-align: center; 
+			font-size: 13px; 
+			font-family: 'Trebuchet MS'; 
+			color: teal; 
+			margin-left: -80px;
+		}
+		.styling{
+			padding:0%; 
+			margin:0%; 
+			font-size: 150px; 
+			text-align: center; 
+			font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+			color: "black"
+		}
+		.textar{
+			margin-top: 5px;
+			display: block;
+   			margin-left: auto;
+    		margin-right: auto;
+			border: none;
+			background-color:whitesmoke;
+			padding: 20px;
+			color: black;
+			font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+			font-size: 12px;
+		}
+		textarea:focus::placeholder {
+  			color: transparent;
+		}
+		.btn{
+			padding-top: 15px;
+			padding-bottom: 15px;
+			padding-right: 35px;
+			padding-left: 35px;
+			border: none;
+			font-size: 15px;
+			font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+			margin-right: auto;
+			display: block;
+			margin-left: auto;
+			cursor: pointer;
+			text-decoration: none;
+
+		}
+	</style>
 
 	
 	
