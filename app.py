@@ -27,14 +27,14 @@ def home():
 def predict():
     if request.method == "POST":
         message = request.form['message']
-        review = []
-        sent = [message]
-        ps=PorterStemmer()
-        sent = re.sub('[^A-Za-z]', ' ', message).lower().split()
-        sent = [ps.stem(i) for i in sent if not i in stopwords.words('english')]
-        sent = ' '.join(sent)
-        review.append(sent)
-        review = cv.transform(review).toarray()
+        # review = []
+        data = [message]
+        # ps=PorterStemmer()
+        # sent = re.sub('[^A-Za-z]', ' ', message).lower().split()
+        # sent = [ps.stem(i) for i in sent if not i in stopwords.words('english')]
+        # sent = ' '.join(sent)
+        # review.append(sent)
+        review = cv.transform(data).toarray()
         my_prediction = model.predict(review)
     return render_template('result.html', prediction=my_prediction)
 
