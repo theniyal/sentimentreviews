@@ -7,7 +7,6 @@ Created on Tue May 12 17:55:21 2020
 import pandas as pd
 import numpy as np
 import re
-import nltk
 from nltk.corpus import stopwords
 from nltk.stem import PorterStemmer 
 from sklearn.metrics import accuracy_score
@@ -72,6 +71,6 @@ def predict(sent):
     return out
 #%%
 import pickle
-pickle.dump(cv, open(r'C:\Users\Daniyal\Desktop\cv.pkl', 'wb'))
-pickle.dump(modelSVM, open(r'C:\Users\Daniyal\Desktop\ModelSVM.pkl', 'wb'))
+pickle.dump(cv, open('transfrom.pkl', 'wb'))
+pickle.dump(modelSVM, open('model.pkl', 'wb'))
 

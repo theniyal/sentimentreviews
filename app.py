@@ -11,9 +11,8 @@ import re
 from nltk.corpus import stopwords
 from nltk.stem import PorterStemmer 
 from flask import Flask, request, render_template
-cv = pickle.load(open('cv.pkl', 'rb'))
-model = pickle.load(open('modelSVM.pkl', 'rb'))
-
+cv = pickle.load(open('transfrom.pkl', 'rb'))
+model = pickle.load(open('model.pkl', 'rb'))
 
 app = Flask(__name__)
 
