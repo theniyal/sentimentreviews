@@ -28,9 +28,8 @@ def predict():
     if request.method == 'POST':
         message = request.form['message']
         review = []
-        data = [message]
         ps=PorterStemmer()
-        sent = re.sub('[^A-Za-z]', ' ', data).lower().split()
+        sent = re.sub('[^A-Za-z]', ' ', message).lower().split()
         sent = [ps.stem(i) for i in sent if not i in stopwords.words('english')]
         sent = ' '.join(sent)
         review.append(sent)
